@@ -1,0 +1,13 @@
+DROP TABLE MovieTrailer;
+
+CREATE TABLE MovieTrailer (
+ID int NOT NULL,
+Genre VARCHAR(255) NOT NULL,
+Release_Date DATE,
+Title VARCHAR(255) NOT NULL,
+Platform VARCHAR(255),
+Producer_ID int NOT NULL,
+Editor_ID int NOT NULL,
+PRIMARY KEY (ID),
+CONSTRAINT FK_1 FOREIGN KEY (Editor_ID) REFERENCES Editor(ID),
+CONSTRAINT FK_2 FOREIGN KEY (Producer_ID) REFERENCES Producer (producerID));
